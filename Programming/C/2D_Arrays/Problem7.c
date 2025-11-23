@@ -1,28 +1,30 @@
-// Print the row number having max sum
+// Row with maximum number of 1's
 
 #include <stdio.h>
 
 void matrix (int r, int c, int arr[][c])
 {
-    int sum_after_row = 0, max_sum = 0, index;
+    int count = 0, max_count = 0, index;
 
     for (int i = 0; i < r; i++)
     {
-        sum_after_row = 0;
+        count = 0;
         for (int j = 0; j < c; j++)
         {
             printf("Enter the value of the element at (%d,%d): ", i+1, j+1);
             scanf("%d", &arr[i][j]);
-            sum_after_row += arr[i][j];
-            if (max_sum < sum_after_row)
-            {
-                max_sum = sum_after_row;
-                index = i;
-            }
+            if (arr[i][j] == 1) count += 1;
         }
+
+        if (max_count < count)
+        {
+            max_count = count;
+            index = i;
+        }
+
         printf("\n");
     }
-    printf("\nMax sum is %d of row %d.\n", max_sum, index + 1);
+    printf("\nMax number of 1 is %d in row %d.\n", max_count, index + 1);
 }
 
 

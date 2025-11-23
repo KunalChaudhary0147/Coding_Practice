@@ -2,7 +2,6 @@
 
 #include<stdio.h>
 
-
 void matrix (int r, int c, int arr[][c])
 {
     for (int i = 0; i < r; i++)

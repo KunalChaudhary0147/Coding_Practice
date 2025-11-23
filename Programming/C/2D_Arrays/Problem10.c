@@ -1,28 +1,46 @@
-// Print the row number having max sum
+/* Wave printing - 2
+1 2 3
+4 5 6
+7 8 9
+
+Output =
+7 4 1
+2 5 8
+9 6 3    */
 
 #include <stdio.h>
+#include <stdbool.h>
 
 void matrix (int r, int c, int arr[][c])
 {
-    int sum_after_row = 0, max_sum = 0, index;
+    bool val = true;
 
     for (int i = 0; i < r; i++)
     {
-        sum_after_row = 0;
         for (int j = 0; j < c; j++)
         {
             printf("Enter the value of the element at (%d,%d): ", i+1, j+1);
             scanf("%d", &arr[i][j]);
-            sum_after_row += arr[i][j];
-            if (max_sum < sum_after_row)
-            {
-                max_sum = sum_after_row;
-                index = i;
-            }
         }
         printf("\n");
     }
-    printf("\nMax sum is %d of row %d.\n", max_sum, index + 1);
+
+    for (int i = 0; i < c; i++)
+    {
+        if (val)
+        {
+            for (int j = r - 1; j >= 0; j--) printf("%d ", arr[j][i]);
+            val = false;
+        }
+
+        else
+        {
+            for (int j = 0; j < c; j++) printf("%d ", arr[j][i]);
+            val = true;
+        }
+        
+        printf("\n");
+    }
 }
 
 
