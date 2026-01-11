@@ -1,0 +1,104 @@
+<head>
+
+    <style>
+        .side-button {
+            padding: 7px 5px;
+        }
+
+        .pages {
+            color: rgb(89, 0, 89);
+            margin: 3px;
+            font-size: 14px;
+        }
+
+        .shadow {
+            background-color: green;
+            border: none;
+            color: white;
+            padding: 5px 11px;
+            cursor: pointer;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.45); 
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .shadow:active {
+            transform: translate(2px, 2px);
+            box-shadow: none;
+        }
+
+        .stretch {
+            background-color: green;
+            border: none;
+            color: white;
+            padding: 5px 11px;
+            cursor: pointer;
+            transition: padding 0.5s;
+        }
+
+        .stretch:hover {
+            padding: 10px 40px;
+        }
+
+        .one, .two, .three {
+            margin: 0 10px 0 10px;
+            background-color: green;
+            border: none;
+            color: white;
+            padding: 5px 11px;
+            cursor: pointer;
+            transition: padding 0.4s, margin 0.4s;
+        }
+
+        .one:hover, .two:hover, .three:hover {
+            margin: 0 0 0 0;
+            padding: 5px 21px 5px 21px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p>
+        <button class="side-button" style="margin-right: 2px">
+            Back
+        </button>
+
+        <a class="pages" href="https://google.com">1</a>
+        <a class="pages" href="https://google.com">2</a>
+        <a class="pages" href="https://google.com">3</a>
+        <a class="pages" href="https://google.com">4</a>
+        <a class="pages" href="https://google.com">5</a>
+
+        <button class="side-button" style="margin-left: 2px">
+            Next
+        </button>
+    </p>
+
+    <p>
+        <button class="shadow">
+            Shadow
+        </button>
+    </p>
+
+    <p>
+        <button class="stretch">
+            Stretch
+        </button>
+    </p>
+
+    <p>
+        <button class="one" >
+            ONE
+        </button>
+
+        <button class="two">
+            TWO
+        </button>
+
+        <button class="three">
+            THREE
+        </button>
+    </p>
+
+</body>
